@@ -1,0 +1,45 @@
+#!/bin/sh
+
+LIBDIR_SRC1=./lib/arm64
+LIBDIR_SRC2=./lib/armv7
+LIBDIR_SRC3=./lib/i386
+LIBDIR_SRC4=./lib/x86_64
+
+LIBDIR_DST=./lib
+
+LIBNAME=libavcodec.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libavdevice.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libavfilter.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libavformat.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libavresample.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libavutil.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libpostproc.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libswscale.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
+LIBNAME=libswresample.a
+lipo -create ${LIBDIR_SRC1}/${LIBNAME} ${LIBDIR_SRC2}/${LIBNAME} ${LIBDIR_SRC3}/${LIBNAME} ${LIBDIR_SRC4}/${LIBNAME}  -output ${LIBDIR_DST}/${LIBNAME}
+lipo -info ${LIBDIR_DST}/${LIBNAME}
+
